@@ -7,9 +7,9 @@ export class GameObject {
                     position,
                     scale}){
         this.game = game;
-        this.sprite = sprite;
-        this.position = position;
-        this.scale = scale;
+        this.sprite = sprite ?? {x:0,y:0,width:TILE_SIZE,height:TILE_SIZE,image:""};
+        this.position = position ?? {x:0,y:0};
+        this.scale = scale ?? 1;
     }
     draw(ctx){
         ctx.fillRect(
