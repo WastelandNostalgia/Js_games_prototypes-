@@ -1,5 +1,6 @@
 import {World} from "./world.js";
 import {Hero} from "./hero.js";
+import {Input} from "./input.js";
 export const TILE_SIZE = 32;
 export const COLS = 15;
 export const ROWS = 20;
@@ -16,6 +17,9 @@ window.addEventListener('load', function () {
     const world = new World();
     world.drawGrid(ctx);
 
-    const myHero = new Hero();
+    const myHero = new Hero({
+        position: {x:5, y:2},
+    });
     myHero.draw(ctx);
+    const input = new Input();
 })

@@ -5,7 +5,8 @@ export class GameObject {
                     game,
                     sprite,
                     position,
-                    scale}){
+                    scale
+    }){
         this.game = game;
         this.sprite = sprite ?? {x:0,y:0,width:TILE_SIZE,height:TILE_SIZE,image:""};
         this.position = position ?? {x:0,y:0};
@@ -13,8 +14,8 @@ export class GameObject {
     }
     draw(ctx){
         ctx.fillRect(
-            5*TILE_SIZE,
-            10*TILE_SIZE,
+            this.position.x*TILE_SIZE,
+            this.position.y*TILE_SIZE,
             TILE_SIZE,
             TILE_SIZE
         )
