@@ -18,5 +18,6 @@ export class Hero extends GameObject {
             console.log("moving left");
             this.position.x--;
         }
+        console.log('x = ', this.position.x,' y = ', this.position.y, );
     }
 }
