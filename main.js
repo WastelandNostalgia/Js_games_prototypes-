@@ -7,7 +7,11 @@ export const ROWS = 20;
 
 const GAME_WIDTH = TILE_SIZE * COLS;
 const GAME_HEIGHT = TILE_SIZE * ROWS;
-
+//!!!!!!!
+// const assets = document.getElementById('assets');
+// assets.style.width = GAME_WIDTH.toString();
+// assets.style.height = GAME_HEIGHT.toString();
+// //!!!!!!
 window.addEventListener('load', function () {
     const canvas = document.querySelector('#canvas1');
     const ctx = canvas.getContext('2d');
@@ -32,7 +36,7 @@ window.addEventListener('load', function () {
     const game = new Game();
     function animate(){
         requestAnimationFrame(animate);
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
         game.render(ctx);
         // console.log('animating');
     }
